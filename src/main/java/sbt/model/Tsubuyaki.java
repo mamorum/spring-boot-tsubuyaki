@@ -1,22 +1,23 @@
 package sbt.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Version;
-
-import org.hibernate.validator.constraints.NotEmpty;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Version;
 
 @Entity
 public class Tsubuyaki extends TimestampEntity {
 
-	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
-    public long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  public long id;
 
-	@NotEmpty
-	public String txt;
+  @Column(nullable = false)
+  public String txt;
 
-	@Version
-	public long version;
+  @Version
+  @Column(nullable = false)
+  public long version;
 }
