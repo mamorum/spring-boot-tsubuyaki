@@ -1,26 +1,21 @@
 package it;
 
-import it.page.TsubuyakiPage;
+import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selenide.*;
 
-import org.fluentlenium.adapter.FluentTest;
-import org.fluentlenium.core.annotation.Page;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-public class TsubuyakiTest extends FluentTest {
+public class TsubuyakiTest {
 
-	@Page TsubuyakiPage つぶやき画面;
-
-	@Test public void つぶやきを投稿する() {
-
-		// given
-		goTo(つぶやき画面);
-		String つぶやき = "こんにちは。";
-
-		// when
-		つぶやき画面.つぶやきを投稿する(つぶやき);
-
-		// then
-		goTo(つぶやき画面);
-		つぶやき画面.つぶやきが表示されている(つぶやき);
-	}
+  @Test
+  public void userCanPostTsubuyaki() {
+    // つぶやき投稿
+    open("/");
+    $("#txt").setValue("こんにちは。");
+    $("#create").click();
+    
+    // 検証
+    $$(".tsubuyaki .txt p").get(0).should(appear);
+    $$(".tsubuyaki .txt p").get(0).shouldHave(text("こんにちは。"));
+  }
 }
