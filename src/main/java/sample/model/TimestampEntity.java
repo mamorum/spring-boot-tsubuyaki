@@ -1,4 +1,4 @@
-package sbt.model;
+package sample.model;
 
 import java.sql.Timestamp;
 import java.time.Instant;

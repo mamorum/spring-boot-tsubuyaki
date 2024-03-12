@@ -1,4 +1,4 @@
-package sbt.controller;
+package sample.controller;
 
 import java.util.Collections;
 import java.util.Map;
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import sbt.model.Tsubuyaki;
-import sbt.repository.TsubuyakiRepository;
+import sample.model.Tsubuyaki;
+import sample.repository.TsubuyakiRepository;
 
 @RestController
 @RequestMapping("/tsubuyaki")

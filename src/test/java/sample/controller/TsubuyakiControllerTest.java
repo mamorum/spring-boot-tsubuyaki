@@ -1,4 +1,4 @@
-package sbt.controller;
+package sample.controller;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
@@ -8,8 +8,8 @@ import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
-import sbt.model.Tsubuyaki;
-import sbt.repository.TsubuyakiRepository;
+import sample.model.Tsubuyaki;
+import sample.repository.TsubuyakiRepository;
 
 public class TsubuyakiControllerTest {
 
