@@ -1,24 +1,16 @@
 @charset "UTF-8";
 
 body {
-  background-color: #A5D6A7;
-  font-family: "メイリオ", "ヒラギノ角ゴ Pro W3", sans-serif;
+  background-color:#E8F5E9;
+  font-family: "メイリオ", sans-serif;
   font-size: 16px;
 }
 header {
   background-color: #ffffff;
 }
 section {
-  min-height:650px;
-  padding-top:50px;
-  padding-bottom:50px;
-  background-color:#E8F5E9;
-}
-footer {
-  font-size:14px;
-  color:#ffffff;
-  text-align:center;
-  padding:15px 0px 50px 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 
@@ -26,7 +18,7 @@ footer {
 .navbar {
   margin-bottom: 0px;
   border-radius: 0px;
-  border-bottom: 2px solid #A5D6A7;
+  border-bottom: 2px solid #91c594;
 }
 .navbar-header {
   min-width: 100%;
@@ -49,10 +41,15 @@ footer {
   text-align:center;
 }
 #tweet-form {
-  background-color:#A5D6A7;
+  background-color:#b2e1b4;
   border: solid 1px #5cb85c;
   border-radius: 10px 10px 0px 0px;
   padding: 15px 15px 15px;
+}
+#tweet-form textarea {
+  border: none;
+  resize: none;
+  outline: none;
 }
 .tweet {
   background-color:#ffffff;
