@@ -24,7 +24,8 @@ section {
 .navbar-header {
   min-width: 100%;
 }
-.form-control, .btn {
+.form-control,
+.btn {
   font-size: 16px;
 }
 .form-horizontal .form-group {
@@ -45,12 +46,12 @@ section {
   background-color:#b2e1b4;
   border: solid 1px #5cb85c;
   border-radius: 10px 10px 0px 0px;
-  padding: 15px 15px 15px;
+  padding: 15px 15px 10px;
 }
 #tweet-form textarea {
   border: none;
   resize: none;
-  outline: none;
+  margin-bottom: 10px;
 }
 .tweet {
   background-color:#ffffff;
