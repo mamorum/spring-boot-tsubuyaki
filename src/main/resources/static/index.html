@@ -25,20 +25,16 @@
 <section>
 <div class="container">
   <div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
-        <div id="tweet-form">
-          <form class="form-horizontal">
-            <div class="form-group">
-              <textarea class="form-control" id="txt" rows="3" placeholder="ひとこと"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="button" id="create" class="btn btn-success pull-right" value="ツイート">
-              </div>
-          </form>
-        </div><!--  tweet-form -->
-        <div id="tweet-list"></div>
-      </div><!-- .col-sm-6 -->
-  </div>
+    <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+      <div id="tweet-form">
+        <textarea class="form-control" id="txt" rows="3" placeholder="メッセージ"></textarea>
+        <div class="d-flex justify-content-end">
+        <button id="create" class="btn btn-success">ツイート</button>
+        </div>
+      </div><!--  tweet-form -->
+      <div id="tweet-list"></div>
+    </div><!-- .col-* -->
+  </div><!-- .row -->
 </div>
 </section>
 
