@@ -51,7 +51,7 @@ $(function() {
   $('body').on('click', '.edit', function() {
     $tweet = $(this).closest('.tweet');
     $('#new-txt').val($tweet.find('.txt p').html());
-    $('#modal').modal();
+    $('#modal').modal('show');
   });
   $('#modal-update').click(function() {
     let txt = $('#new-txt').val();
