@@ -48,43 +48,43 @@ footer {
   margin-bottom: 5px;
   text-align:center;
 }
-#tsubuyaki-form {
+#tweet-form {
   background-color:#A5D6A7;
   border: solid 1px #5cb85c;
   border-radius: 10px 10px 0px 0px;
   padding: 15px 15px 15px;
 }
-.tsubuyaki {
+.tweet {
   background-color:#ffffff;
   border-left: solid 1px #5cb85c;
   border-right: solid 1px #5cb85c;
   border-bottom: solid 1px #5cb85c;
   padding: 15px 15px 10px 15px;
 }
-.tsubuyaki:hover,
-.tsubuyaki:hover .action .btn {
+.tweet:hover,
+.tweet:hover .action .btn {
   background-color: #f5fbf6;
 }
-.tsubuyaki:last-child {
+.tweet:last-child {
   border-radius: 0px 0px 10px 10px;
 }
-.tsubuyaki .txt p {
+.tweet .txt p {
   white-space: pre-wrap;
   word-wrap: break-word;
   margin: 0 0 5px;
 }
-.tsubuyaki .action .btn {
+.tweet .action .btn {
   color: #7e7e7e;
   font-size: 15px;
   margin-right: 5px;
   padding: 6px 5px 2px 6px;
   border: none;
 }
-.tsubuyaki .action .btn:hover {
+.tweet .action .btn:hover {
   background-color: #5cb85c;
   color: #ffffff;
 }
-.tsubuyaki .date {
+.tweet .date {
   color: #7e7e7e;
   font-size: 14px;
   padding-left:3px;

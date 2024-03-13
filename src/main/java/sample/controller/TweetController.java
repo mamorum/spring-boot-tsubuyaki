@@ -14,29 +14,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import sample.model.Tsubuyaki;
-import sample.repository.TsubuyakiRepository;
+import sample.model.Tweet;
+import sample.repository.TweetRepository;
 
 @RestController
-@RequestMapping("/tsubuyaki")
-public class TsubuyakiController {
+@RequestMapping("/tweet")
+public class TweetController {
 
   @Autowired
-  TsubuyakiRepository repo;
+  TweetRepository repo;
 
   @PostMapping
-  public Map<String, Tsubuyaki> create(
-    @RequestBody Tsubuyaki tsubuyaki
+  public Map<String, Tweet> create(
+    @RequestBody Tweet tweet
   ) {
     return Collections.singletonMap(
-      "tsubuyaki", repo.save(tsubuyaki)
+      "tweet", repo.save(tweet)
     );
   }
 
   @GetMapping
-  public Map<String, Iterable<Tsubuyaki>> read() {
+  public Map<String, Iterable<Tweet>> read() {
     return Collections.singletonMap(
-      "tsubuyaki", repo.findAllByOrderByUpdatedTimeDesc()
+      "tweet", repo.findAllByOrderByUpdatedTimeDesc()
     );
   }
 
@@ -44,9 +44,9 @@ public class TsubuyakiController {
   public void update(
     @PathVariable Long id, @RequestParam String txt
   ) {
-    Tsubuyaki tsubuyaki = repo.findById(id).get();
-    tsubuyaki.txt = txt;
-    repo.save(tsubuyaki);
+    Tweet tweet = repo.findById(id).get();
+    tweet.txt = txt;
+    repo.save(tweet);
   }
 
   @DeleteMapping("/{id}")

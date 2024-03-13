@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Version;
 
 @Entity
-public class Tsubuyaki extends TimestampEntity {
+public class Tweet extends TimestampEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -8,31 +8,31 @@ import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
-import sample.model.Tsubuyaki;
-import sample.repository.TsubuyakiRepository;
+import sample.model.Tweet;
+import sample.repository.TweetRepository;
 
-public class TsubuyakiControllerTest {
+public class TweetControllerTest {
 
   @Test
   public void testCreate() {
 
     // 準備：テストデータ
-    Tsubuyaki data = new Tsubuyaki();
+    Tweet data = new Tweet();
     data.txt = "メッセージ";
 
     // 準備：モック（リポジトリ）
-    TsubuyakiRepository mock = mock(TsubuyakiRepository.class);
+    TweetRepository mock = mock(TweetRepository.class);
     when(mock.save(data)).thenReturn(data);
 
     // 準備：テスト対象クラス
-    TsubuyakiController target = new TsubuyakiController();
+    TweetController target = new TweetController();
     target.repo = mock;
 
     // 実行：テスト対象メソッド
-    Map<String, Tsubuyaki> result = target.create(data);
+    Map<String, Tweet> result = target.create(data);
 
     // 検証：つぶやきが等しいこと
-    Tsubuyaki tsubuyaki = result.get("tsubuyaki");
-    assertEquals("メッセージ", tsubuyaki.txt);
+    Tweet tweet = result.get("tsubuyaki");
+    assertEquals("メッセージ", tweet.txt);
   }
 }

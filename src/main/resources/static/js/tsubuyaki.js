@@ -2,10 +2,10 @@ $(function() {
 
   // utilities.
   function render(data) {
-    var tmpl = $('#tsubuyaki-tmpl').html();
+    var tmpl = $('#tweet-tmpl').html();
     Mustache.parse(tmpl);
     var rendered = Mustache.render(tmpl, data);
-    $('#tsubuyaki-list').prepend(rendered);
+    $('#tweet-list').prepend(rendered);
   }
   function format(msecString) {
     var d = new Date(Number(msecString));
@@ -28,7 +28,7 @@ $(function() {
 
     // read.
     $.ajax({
-      url: '/tsubuyaki',
+      url: '/tweet',
       method: 'get',
       cache: false
     }).then(function(data, status, jqxhr) {
@@ -47,30 +47,30 @@ $(function() {
     if (txt === '') return;
 
     $.ajax({
-      url: '/tsubuyaki',
+      url: '/tweet',
       data: JSON.stringify({'txt':txt}),
       contentType: 'application/json',
       method: 'post',
       cache: false
     }).then(function(data, status, jqxhr) {
       render(data);
-      var $date = $('.tsubuyaki:first').find('.date');
+      var $date = $('.tweet:first').find('.date');
       $date.html(format($date.html()));
       $('#txt').val('').focus();
     });
   });
 
   // update.
-  var $tsubuyaki;
+  var $tweet;
   $('body').on('click', '.edit', function() {
-    $tsubuyaki = $(this).closest('.tsubuyaki');
-    $('#new-txt').val($tsubuyaki.find('.txt p').html());
+    $tweet = $(this).closest('.tweet');
+    $('#new-txt').val($tweet.find('.txt p').html());
     $('#modal').modal();
   });
   $('#modal-update').click(function() {
 
     var txt = $('#new-txt').val();
-    var url = '/tsubuyaki/' + $tsubuyaki.data('id');
+    var url = '/tweet/' + $tweet.data('id');
 
     $.ajax({
       url: url,
@@ -79,7 +79,7 @@ $(function() {
       cache: false
     }).then(function(data, status, jqxhr) {
       $('#modal').modal('hide');
-      $tsubuyaki.find('.txt p').html(txt);
+      $tweet.find('.txt p').html(txt);
     });
   });
 
@@ -88,15 +88,15 @@ $(function() {
 
     if (!confirm("削除しますか？")) return;
 
-    var $tsubuyaki = $(this).closest('.tsubuyaki');
-    var url = '/tsubuyaki/' + $tsubuyaki.data('id');
+    var $tweet = $(this).closest('.tweet');
+    var url = '/tweet/' + $tweet.data('id');
 
     $.ajax({
       url: url,
       method: 'delete',
       cache: false
     }).then(function(data, status, jqxhr) {
-      $tsubuyaki.remove();
+      $tweet.remove();
     });
   });
 });

@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>つぶやき</title>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-<link href="css/tsubuyaki.css" rel="stylesheet">
+<link href="css/tweet.css" rel="stylesheet">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -21,7 +21,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <div id="brand">
-        <img alt="brand" width="40" height="40" src="img/tsubuyaki.png">
+        <img alt="brand" width="40" height="40" src="img/tweet.png">
       </div>
     </div>
   </div>
@@ -32,7 +32,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
-        <div id="tsubuyaki-form">
+        <div id="tweet-form">
           <form class="form-horizontal">
             <div class="form-group">
               <textarea class="form-control" id="txt" rows="3" placeholder="ひとこと"></textarea>
@@ -41,8 +41,8 @@
                 <input type="button" id="create" class="btn btn-success pull-right" value="つぶやく">
               </div>
           </form>
-        </div><!--  tsubuyaki-form -->
-        <div id="tsubuyaki-list"></div>
+        </div><!--  tweet-form -->
+        <div id="tweet-list"></div>
       </div><!-- .col-sm-6 -->
   </div>
 </div>
@@ -52,9 +52,9 @@
 <p>&copy; 2016 web-dev</p>
 </footer>
 
-<script id="tsubuyaki-tmpl" type="x-tmpl-mustache">
-{{#tsubuyaki}}
-<div class="tsubuyaki" data-id="{{id}}">
+<script id="tweet-tmpl" type="x-tmpl-mustache">
+{{#tweet}}
+<div class="tweet" data-id="{{id}}">
   <div class="txt"><p>{{txt}}</p></div>
   <span class="action">
     <button type="button" class="btn btn-default edit">
@@ -66,7 +66,7 @@
   </span>
   <span class="date">{{updatedTime}}</span>
 </div>
-{{/tsubuyaki}}
+{{/tweet}}
 </script>
 
 <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
@@ -95,6 +95,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.min.js"></script>
-<script src="js/tsubuyaki.js"></script>
+<script src="js/tweet.js"></script>
 </body>
 </html>

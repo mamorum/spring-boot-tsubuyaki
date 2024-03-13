@@ -5,7 +5,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 import org.junit.jupiter.api.Test;
 
-public class TsubuyakiTest {
+public class TweetTest {
 
   @Test
   public void userCanPostTsubuyaki() {

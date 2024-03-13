@@ -1,4 +1,4 @@
-CREATE TABLE tsubuyaki (
+CREATE TABLE tweet (
   id bigserial PRIMARY KEY,
   txt varchar(100) NOT NULL,
   version bigint NOT NULL,
