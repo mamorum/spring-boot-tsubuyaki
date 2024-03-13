@@ -36,7 +36,7 @@ public class TweetController {
   @GetMapping
   public Map<String, Iterable<Tweet>> read() {
     return Collections.singletonMap(
-      "tweet", repo.findAllByOrderByUpdatedTimeDesc()
+      "tweet", repo.findAllByOrderByUpdateTimeDesc()
     );
   }
 
