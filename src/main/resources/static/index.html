@@ -38,7 +38,7 @@
               <textarea class="form-control" id="txt" rows="3" placeholder="ひとこと"></textarea>
               </div>
               <div class="form-group">
-                <input type="button" id="create" class="btn btn-success pull-right" value="つぶやく">
+                <input type="button" id="create" class="btn btn-success pull-right" value="ツイート">
               </div>
           </form>
         </div><!--  tweet-form -->
@@ -47,10 +47,6 @@
   </div>
 </div>
 </section>
-
-<footer>
-<p>&copy; 2016 web-dev</p>
-</footer>
 
 <script id="tweet-tmpl" type="x-tmpl-mustache">
 {{#tweet}}
@@ -64,7 +60,7 @@
       <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 削除
     </button>
   </span>
-  <span class="date">{{updatedTime}}</span>
+  <span class="date">{{createTime}}</span>
 </div>
 {{/tweet}}
 </script>
