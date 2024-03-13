@@ -19,6 +19,7 @@ section {
   margin-bottom: 0px;
   border-radius: 0px;
   border-bottom: 2px solid #91c594;
+  padding: 0;
 }
 .navbar-header {
   min-width: 100%;
