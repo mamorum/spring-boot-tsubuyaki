@@ -1,9 +1,12 @@
+import mustache from 'https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.2.0/mustache.min.js';
+
+const template = $('#tweet-template').html();
+mustache.parse(template);
+
 $(function() {
   // utilities.
   function render(data) {
-    let tmpl = $('#tweet-tmpl').html();
-    Mustache.parse(tmpl);
-    let rendered = Mustache.render(tmpl, data);
+    let rendered = mustache.render(template, data);
     $('#tweet-list').prepend(rendered);
   }
   function deleteSec(dateString) {
