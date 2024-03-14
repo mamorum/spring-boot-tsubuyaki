@@ -15,7 +15,12 @@ public class TweetTest {
     $("#create").click();
     
     // 検証
-    $$(".tsubuyaki .txt p").get(0).should(appear);
-    $$(".tsubuyaki .txt p").get(0).shouldHave(text("こんにちは。"));
+    var $p = $$(".tweet .txt p").get(0);
+    $p.should(appear);
+    $p.shouldHave(text("こんにちは。"));
+    
+    // 削除
+    $$(".tweet").get(0).$(".delete").click();
+    switchTo().alert().accept();
   }
 }
