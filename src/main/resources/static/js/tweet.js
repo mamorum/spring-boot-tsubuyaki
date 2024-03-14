@@ -3,8 +3,8 @@ $(function() {
   Mustache.parse(template);
 
   // utilities.
-  function render(data) {
-    let rendered = Mustache.render(template, data);
+  function render(tweet) {
+    let rendered = Mustache.render(template, tweet);
     $('#tweet-list').prepend(rendered);
   }
   function deleteSec(dateString) {
@@ -48,11 +48,11 @@ $(function() {
   let $tweet;
   $('body').on('click', '.edit', function() {
     $tweet = $(this).closest('.tweet');
-    $('#new-txt').val($tweet.find('.txt p').html());
+    $('#modal-txt').val($tweet.find('.txt p').html());
     $('#modal').modal('show');
   });
   $('#modal-update').click(function() {
-    let txt = $('#new-txt').val();
+    let txt = $('#modal-txt').val();
     let url = '/tweet/' + $tweet.data('id');
     $.ajax({
       url: url,
