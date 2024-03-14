@@ -5,42 +5,17 @@ body {
   font-family: "メイリオ", sans-serif;
   font-size: 16px;
 }
-header {
+
+header div {
   background-color: #ffffff;
-}
-section {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-
-/* for overwiting bootstrap.*/
-.navbar {
-  margin-bottom: 0px;
-  border-radius: 0px;
-  border-bottom: 2px solid #91c594;
-  padding: 0;
-}
-.navbar-header {
-  min-width: 100%;
-}
-.form-control,
-.btn {
-  font-size: 16px;
-}
-.form-horizontal .form-group {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-.form-horizontal .form-group:last-child {
-  margin-bottom: 0px;
+  border-bottom: 2px solid #91c594;  
+  padding-top:4px;
+  padding-bottom: 4px;
 }
 
-/* for app. */
-#brand {
-  margin-top:5px;
-  margin-bottom: 5px;
-  text-align:center;
+main {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 #tweet-form {
   background-color:#b2e1b4;
@@ -60,8 +35,7 @@ section {
   border-bottom: solid 1px #5cb85c;
   padding: 15px 15px 10px 15px;
 }
-.tweet:hover,
-.tweet:hover .action .btn {
+.tweet:hover {
   background-color: #f5fbf6;
 }
 .tweet:last-child {
@@ -70,24 +44,27 @@ section {
 .tweet .txt p {
   white-space: pre-wrap;
   word-wrap: break-word;
-  margin: 0 0 5px;
+  margin-bottom: 5px;
 }
-.tweet .action .btn {
+.tweet .btn,
+.tweet .date {
+  font-size: 14px;
   color: #7e7e7e;
-  font-size: 15px;
-  margin-right: 5px;
-  padding: 6px 5px 2px 6px;
+}
+.tweet .btn {
+  margin-right: 2px;
+  padding: 5px 10px 4px 8px;
   border: none;
 }
-.tweet .action .btn:hover {
+.tweet .btn:hover {
   background-color: #5cb85c;
   color: #ffffff;
 }
 .tweet .date {
-  color: #7e7e7e;
-  font-size: 14px;
-  padding-left:3px;
+  margin-top: 6px;
+  margin-left: 10px;
 }
+
 #modal-label {
   color: #5cb85c;
 }
