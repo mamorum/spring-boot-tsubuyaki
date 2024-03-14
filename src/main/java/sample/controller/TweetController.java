@@ -22,7 +22,7 @@ import sample.repository.TweetRepository;
 public class TweetController {
 
   @Autowired
-  TweetRepository repo;
+  public TweetRepository repo;
 
   @PostMapping
   public Map<String, Tweet> create(
