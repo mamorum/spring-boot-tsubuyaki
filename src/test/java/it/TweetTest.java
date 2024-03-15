@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 public class TweetTest {
 
   @Test
-  public void userCanPostTsubuyaki() {
+  public void userCanPostTweet() {
     // つぶやき投稿
     open("/");
     $("#txt").setValue("こんにちは。");
@@ -19,7 +19,7 @@ public class TweetTest {
     $p.should(appear);
     $p.shouldHave(text("こんにちは。"));
     
-    // 削除
+    // 投稿を削除
     $$(".tweet").get(0).$(".delete").click();
     switchTo().alert().accept();
   }
