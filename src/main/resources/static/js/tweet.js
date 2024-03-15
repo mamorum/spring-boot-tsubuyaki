@@ -1,4 +1,5 @@
 $(function() {
+  // mustache template.
   const template = $('#tweet-template').html();
   Mustache.parse(template);
 
@@ -12,19 +13,17 @@ $(function() {
   }
 
   // onload.
-  (function() {
-    $('#txt').focus();
-    $.ajax({
-      url: '/tweet',
-      method: 'get',
-      cache: false
-    }).then(function(data, status, jqxhr) {
-      render(data);
-      $('.date').each(function(index, e) {
-        $(e).html(deleteSec($(e).html()));
-      })
-    });
-  })();
+  $('#txt').focus();
+  $.ajax({
+    url: '/tweet',
+    method: 'get',
+    cache: false
+  }).then(function(data, status, jqxhr) {
+    render(data);
+    $('.date').each(function(index, e) {
+      $(e).html(deleteSec($(e).html()));
+    })
+  });
   
   // create.
   $('#create').click(function() {
@@ -46,10 +45,13 @@ $(function() {
 
   // update.
   let $tweet;
+  const modal = new bootstrap.Modal(
+    document.getElementById('modal')
+  );
   $('body').on('click', '.edit', function() {
     $tweet = $(this).closest('.tweet');
     $('#modal-txt').val($tweet.find('.txt p').html());
-    $('#modal').modal('show');
+    modal.show();
   });
   $('#modal-update').click(function() {
     let txt = $('#modal-txt').val();
