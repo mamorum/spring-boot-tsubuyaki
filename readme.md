@@ -7,6 +7,7 @@
 - Maven 3.9.6
 - PostgreSQL 15
 - Spring Boot 3.2.3
+- Flyway 9.22.3
 - Bootstrap 5.3.0
 - Bootstrap Icons 1.11.3
 - jQuery 3.7.1
