@@ -4,8 +4,8 @@
 
 ## 使用製品
 - JDK 21
-- Maven 3.9.6
 - PostgreSQL 15
+- Maven 3.9.6
 - Spring Boot 3.2.3
 - Flyway 9.22.3
 - Bootstrap 5.3.0
