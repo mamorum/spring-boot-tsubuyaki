@@ -2,6 +2,10 @@
 つぶやきが投稿できる Webアプリケーションです。
 
 
+## 解説記事
+<a target="_blank" href="https://web-dev.hatenablog.com/entry/spring-boot/dev-web-app/overview">SpringBoot アプリ開発</a>
+
+
 ## 使用製品
 - JDK 21
 - PostgreSQL 15
