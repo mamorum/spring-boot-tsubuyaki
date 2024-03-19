@@ -16,13 +16,15 @@ public abstract class TimestampEntity {
   @Column(updatable = false)
   public Timestamp createTime;
 
+  // INSERTの時に作成日時と更新日時を設定
   @PrePersist
   public void prePersist() {
     Timestamp ts = Timestamp.from(Instant.now());
     this.createTime = ts;
     this.updateTime = ts;
   }
-
+ 
+  // UPDATEの時に更新日時を設定
   @PreUpdate
   public void preUpdate() {
     this.updateTime = Timestamp.from(Instant.now());
