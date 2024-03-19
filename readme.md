@@ -3,7 +3,7 @@
 
 
 ## 解説記事
-<a target="_blank" href="https://web-dev.hatenablog.com/entry/spring-boot/dev-web-app/overview">SpringBoot アプリ開発</a>
+[SpringBoot アプリ開発](https://web-dev.hatenablog.com/entry/spring-boot/dev-web-app/overview)
 
 
 ## 使用製品
