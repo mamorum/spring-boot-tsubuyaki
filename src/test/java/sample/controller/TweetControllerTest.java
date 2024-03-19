@@ -31,7 +31,7 @@ public class TweetControllerTest {
     // 実行：テスト対象メソッド
     Map<String, Tweet> result = target.create(data);
 
-    // 検証：つぶやきが等しいこと
+    // 検証：ツイートが等しいこと
     Tweet tweet = result.get("tweet");
     assertEquals("メッセージ", tweet.txt);
   }
